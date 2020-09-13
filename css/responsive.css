@@ -38,8 +38,11 @@
     #wrapper.morvi-side-menu-open {
         left: 260px;
     }
+    .top_logo{
+        transform: translate(0px,0);
+    }
     .top_logo a img {
-        max-width: 80px;
+        max-width: 140px;
     }
     .cart > a {
         font-size: 12px;

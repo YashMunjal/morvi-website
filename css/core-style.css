@@ -373,6 +373,10 @@ img {
 /* ------------------------
 :: 5.0 Header Area CSS
 ------------------------ */
+.top_logo{
+    width:300px;
+    transform: translate(-100px,0);
+}
 
 .top_header_area {
     height: 150px;
