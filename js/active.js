@@ -135,17 +135,19 @@
         });
     }
 
-    // :: 7.0 Header Cart btn Active Code
-    $('#header-cart-btn').on('click', function () {
-        $('body').toggleClass('cart-data-open');
-    })
-
     // :: 8.0 Side Menu Active Code
     $('#sideMenuBtn').on('click', function () {
         $('#wrapper').toggleClass('morvi-side-menu-open');
+        $('.catagories-side-menu').animate({width:'300px'},500,"linear");
+        $('.catagories-side-menu').css("opacity","1");
     })
     $('#sideMenuClose').on('click', function () {
         $('#wrapper').removeClass('morvi-side-menu-open');
+        $('.catagories-side-menu').animate({width:'0px'},500,"linear");
+        $('.catagories-side-menu').delay(0).queue(function (next) { 
+            $(this).css('opacity', '0'); 
+            next(); 
+          });
     })
 
     // :: 9.0 Magnific-popup Video Active Code
