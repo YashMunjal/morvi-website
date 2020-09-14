@@ -594,6 +594,7 @@ img {
     width:0;
     height: 100%;
     opacity:0;
+    z-index:10000;
 }
 
 #sideMenuClose {
@@ -605,7 +606,7 @@ img {
     text-align: center;
     border-radius: 0;
     cursor: pointer;
-    z-index: 99;
+    z-index: 9900;
     position: absolute;
     top: 0;
     right: 0;
@@ -2101,5 +2102,15 @@ img {
 .first-background-morvi{
     height:100vh;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.185)),url("../img/bg-img/2880-x-2400-seltos.jpg") center no-repeat;
+    background-size: cover;
+}
+.second-background-morvi{
+    height:100vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.185)),url("../img/bg-img/2880-x-2400-carnival.jpg") center no-repeat;
+    background-size: cover;
+}
+.third-background-morvi{
+    height:100vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.185)),url("../img/bg-img/2880-x-2400-sonet.jpg") center no-repeat;
     background-size: cover;
 }

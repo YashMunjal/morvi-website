@@ -136,7 +136,7 @@
     }
 
     // :: 8.0 Side Menu Active Code
-    $('#sideMenuBtn').on('click', function () {
+    $('#sideMenuBtn').on('click', function () { 
         $('#wrapper').toggleClass('morvi-side-menu-open');
         $('.catagories-side-menu').animate({width:'300px'},500,"linear");
         $('.catagories-side-menu').css("opacity","1");
