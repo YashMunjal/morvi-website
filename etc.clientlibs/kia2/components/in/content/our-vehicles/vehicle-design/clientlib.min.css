@@ -1,0 +1,54 @@
+.vehicel-design{overflow-x:hidden;z-index:2;padding-bottom:40px}
+.vehicel-design .h4{font-size:28.5px;margin-bottom:20px}
+.vehicel-design .colorize{zoom:1;position:relative;z-index:10;font-size:.875rem}
+.vehicel-design .colorize:before{content:'';display:block}
+.vehicel-design .colorize:after{content:'';display:table;clear:both}
+.vehicel-design .colorize .swatches{margin-right:0}
+.vehicel-design .check-toggle{display:inline-block;position:relative;width:80px;height:30px;color:#fff;font-size:14px}
+.vehicel-design .check-toggle input{position:absolute;visibility:hidden}
+.vehicel-design .check-toggle input:checked ~ .knob{-webkit-transform:translateX(0);transform:translateX(0)}
+.vehicel-design .check-toggle input:checked ~ .on{display:block}
+.vehicel-design .check-toggle input:checked ~ .off{display:none}
+.vehicel-design .check-toggle:before{content:'';position:absolute;top:10%;left:0;width:100%;height:80%;border-radius:12px;background-color:rgba(0,0,0,0.4)}
+.vehicel-design .check-toggle .knob{position:absolute;top:0;right:0;width:30px;height:30px;background-color:#666;-webkit-transform:translateX(-50px);transform:translateX(-50px);-webkit-transition:background-color .2s ease-out,-webkit-transform .2s ease-out;transition:background-color .2s ease-out,-webkit-transform .2s ease-out;transition:transform .2s ease-out,background-color .2s ease-out;transition:transform .2s ease-out,background-color .2s ease-out,-webkit-transform .2s ease-out;border-radius:50%;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.4);box-shadow:0 0 3px rgba(0,0,0,0.4)}
+.vehicel-design .check-toggle .label-text{position:absolute;top:4px}
+.vehicel-design .check-toggle .on{left:15px;display:none}
+.vehicel-design .check-toggle .off{right:15px}
+.vehicel-design .check-toggle:hover .knob,.vehicel-design .check-toggle:focus .knob{background-color:#bb162b}
+@media only screen and (max-width:1023px){.vehicel-design .tabs{position:absolute;top:94px;left:200px}
+.vehicel-design .colorize{padding-top:50px}
+.vehicel-design .swatches{padding-left:8.26666667%;padding-right:8.26666667%}
+.vehicel-design .swatches:after{content:'';display:block;width:25px;height:36px;-ms-flex-negative:0;flex-shrink:0}
+.vehicel-design .swatch-text{margin-bottom:5px;padding-left:8.26666667%}
+}
+@media only screen and (max-width:767px){.vehicel-design .tabs{top:84px}
+}
+@media only screen and (min-width:1024px){.vehicel-design .h4{margin-bottom:20px}
+.vehicel-design .cont{position:absolute;top:80px;left:0;z-index:10;width:100%}
+.vehicel-design .tabs{font-size:1.125rem}
+.vehicel-design .colorize{margin-top:-25px}
+.vehicel-design .style-exterior{float:left}
+.vehicel-design .style-interior{float:right;text-align:right}
+.vehicel-design .on-interior .tab{color:rgba(255,255,255,0.6)}
+.vehicel-design .on-interior .tab:hover,.vehicel-design .on-interior .tab:focus,.vehicel-design .on-interior .tab.is-active{color:#fff}
+}
+@media only screen and (max-width:1023px){.on-exterior .style-interior{display:none}
+.on-interior .style-exterior{display:none}
+.theme-dark.on-interior{color:#000}
+}
+#x-show-interior{position:absolute;top:200px;left:0;right:0;bottom:160px}
+@media only screen and (min-width:1024px){#x-show-interior{top:20px;left:20px;right:20px;bottom:20px}
+}
+.fake-box{position:relative;display:block;height:0;padding-bottom:50%}
+.fake-box-wrap{position:relative}
+.fake-box+.tab-content{position:absolute;top:0;left:0;width:100%;height:100%}
+.interior-container{position:absolute;top:0;left:0;width:100%;height:100%}
+.interior-iframe{width:100%;height:100%}
+#x-design-view-reel .reel-preloader{display:none !important;bottom:-2px !important}
+.rotate-area{position:relative;width:100%;margin-bottom:20px}
+.rotate-label{position:absolute;left:50%;bottom:-5px;width:100px;margin-left:-50px;font-weight:bold;text-align:center}
+.rotate-label .icon{font-size:21px;font-weight:bold;line-height:1;vertical-align:middle}
+.rotate-label .text{font-size:12px;vertical-align:middle}
+@media only screen and (min-width:1024px){.rotate-area{margin-bottom:0}
+.rotate-label{bottom:30px}
+}

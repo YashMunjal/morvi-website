@@ -1,0 +1,8 @@
+@charset "UTF-8";@media only screen and (max-width:1023px){.kfws-slider .swiper-wrapper .swiper-slide{opacity:1}
+}
+@media only screen and (max-width:767px){.kfws-slider .swiper-button-prev,.kfws-slider .swiper-button-next{display:none}
+.kfws-slider .swiper-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:columm;flex-direction:columm;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.kfws-slider .swiper-wrapper .swiper-slide{-ms-flex-negative:inherit;flex-shrink:inherit}
+}
+@media only screen and (min-width:1024px){.kfws-slider .swiper-button-prev,.kfws-slider .swiper-button-next{top:130px}
+}
