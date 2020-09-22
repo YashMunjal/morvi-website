@@ -1,0 +1,30 @@
+.trims .swiper-slide{background-color:#fff}
+.trims .trim-card{padding-bottom:60px}
+.trims .trim-header{padding:25px 30px 20px;background-color:#1f1f1f;color:#fff}
+.trims .trim-header .h4{font-size:2rem}
+.trims .trim-header .info{margin:5px 0 0}
+.trims .trim-header .price{margin-right:5px;font-size:.875rem;font-weight:bold;letter-spacing:.005em}
+.trims .trim-header .desc{color:rgba(255,255,255,0.6);font-size:.625rem}
+.trims .trim-body{padding:25px 30px}
+.trims .trim-func{position:absolute;left:30px;right:30px;bottom:18px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.2)}
+.trims .trim-func .link{font-size:.875rem;font-weight:bold;letter-spacing:.005em}
+.trims .trim-func .link:after{position:relative;top:-1px;font-weight:bold;line-height:1;vertical-align:middle}
+.trims .trim-func .link+.link{margin-left:15px}
+.trims .swatches{margin-bottom:20px}
+.trims .features{margin-top:0;margin-bottom:1em;font-size:.875rem;font-weight:bold}
+.trims .feature-item{margin-top:10px;font-size:.75rem}
+@media only screen and (max-width:1023px){.trims .swatches{flex-wrap:wrap;!important}
+.trims .swiper-button-prev,.trims .swiper-button-next{display:none}
+}
+@media only screen and (min-width:1024px){.trims .trim-card{padding-bottom:108px}
+.trims .trim-header{padding:34px 50px 28px}
+.trims .trim-header .h4{font-size:2.5rem}
+.trims .trim-header .info{margin:10px 0 0}
+.trims .trim-header .price{font-size:1.5rem;letter-spacing:-0.02em}
+.trims .trim-header .desc{font-size:.875rem}
+.trims .trim-body{padding:2rem 50px 0;overflow:hidden;!important}
+.trims .trim-func{position:absolute;left:50px;right:50px;bottom:30px;border-top:1px solid rgba(0,0,0,0.2)}
+.trims .swatches{-ms-flex-wrap:wrap;flex-wrap:wrap;height:60px;margin-right:-20px;margin-bottom:0}
+.trims .swatch{margin-top:0;margin-bottom:6px}
+.trims .feature-item{font-size:.875rem}
+}

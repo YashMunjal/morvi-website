@@ -1,0 +1,17 @@
+@charset "UTF-8";@media only screen and (max-width:1023px){.quotes-slider .swiper-button-prev,.quotes-slider .swiper-button-next{display:none}
+}
+.quote-article{margin:0}
+.quote-article .bubble-box{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;height:140px;padding:20px 30px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:#eff1f2;font-size:1.125rem}
+.quote-article .bubble-box q{text-indent:-0.5em}
+.quote-article .bubble-box:after{content:'';position:absolute;left:30px;top:100%;border:10px solid;border-color:#eff1f2 transparent transparent}
+.quote-article cite{display:block;height:40px;margin:35px 0 20px}
+.quote-article dl{margin-bottom:1em}
+.quote-article dt{margin-bottom:.5em;font-weight:bold;font-size:1rem;letter-spacing:.005em}
+.quote-article dd{color:#666;font-size:.875rem}
+.quote-article .link{font-size:.875rem;font-weight:bold}
+@media only screen and (min-width:1024px){.quote-article cite{text-align:center;vertical-align:middle}
+.quote-article dt{font-size:1.125rem}
+.quote-article .bubble-box{height:230px}
+.quote-article .bubble-box q{padding:0 1em;font-size:1.3rem}
+.quote-article .bubble-box:after{left:50%;margin-left:-10px}
+}

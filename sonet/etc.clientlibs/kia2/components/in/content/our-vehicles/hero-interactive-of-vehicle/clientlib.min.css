@@ -1,0 +1,32 @@
+.showroom-header .cover-info-item .icon-wrap{width:80px !important}
+.btn .btn--invert{width:195px !important}
+.showroom-header{overflow:hidden;-webkit-box-sizing:border-box;box-sizing:border-box;position:relative;z-index:40;height:600px;padding-top:60px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.showroom-header .base-content-top{position:absolute;top:90px;left:0;right:0}
+.showroom-header .base-content-bottom{padding-bottom:40px}
+.showroom-header .heading-img-wrap{max-width:390px;padding-bottom:1.5rem}
+.showroom-header .func{text-align:right}
+.showroom-header .build-info{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.showroom-header .price{font-size:1.125rem;letter-spacing:.005em}
+.showroom-header .desc{color:#fff;font-size:.875rem;font-style:normal;font-weight:normal;white-space:nowrap}
+.showroom-header .btn{padding:15px}
+.showroom-header .row{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}
+.showroom-header .cover-name{font-weight:normal;margin-bottom:10px}
+.showroom-header .h2{margin:0;line-height:1}
+.showroom-header .cover-info-item{font-size:.875rem}
+.showroom-header .cover-info-item p{height:4.6em;margin:0;font-weight:bold;letter-spacing:.005em}
+.showroom-header .cover-info-item .icon{font-size:40px}
+.showroom-header .cover-info-item .icon-wrap{width:48px;margin-bottom:8px}
+.showroom-header .cover-info-item.star .icon{font-size:14px}
+.showroom-header .cover-info-item.star .icon-wrap{width:auto;padding-bottom:15px}
+@media only screen and (max-width:1023px){.showroom-header .cover-info-item,.showroom-header .tabs{display:none}
+.base-content-second{margin-bottom:735px}
+}
+@media only screen and (min-width:1024px){.showroom-header{padding-top:80px;height:900px}
+.showroom-header .base-content-top{top:120px}
+.base-content-second{margin-bottom:180px}
+}
+@media only screen and (max-width:767px){.base-content-second{margin-bottom:310px}
+}
+.btn{display:block !important;min-width:174px !important}
+.second{padding-top:10px}
+.func.second{width:195px;float:right;margin-right:-10px}
