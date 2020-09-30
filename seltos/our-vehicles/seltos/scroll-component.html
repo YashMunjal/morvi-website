@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	
+<head>
+		
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137890001-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137890001-2');
+</script>
+
+<meta charset="utf-8"/>
+<meta name="robots" content="NOODP, NOYDIR"/>
+
+
+
+<title>SONET Showroom</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="format-detection" content="telephone=no"/>
+
+<meta name="description" content="Supernova"/>
+
+    
+
+    
+    
+<link rel="stylesheet" href="../../etc.clientlibs/kia2/clientlibs/in/clientlib-basepage.min.css" type="text/css">
+
+
+
+<link rel="stylesheet" href="../../../css/core-style.css">
+<link rel="stylesheet" href="../../../style.css">
+
+<!-- Responsive CSS -->
+<link href="../../css/responsive.css" rel="stylesheet">
+    
+    
+<script type="text/javascript" src="../../etc.clientlibs/kia2/clientlibs/in/jquery.min.js"></script>
+<script type="text/javascript" src="../../etc.clientlibs/kia2/clientlibs/in/utils.min.js"></script>
+<script type="text/javascript" src="../../etc.clientlibs/kia2/clientlibs/in/clientlib-basepage.min.js"></script>
+
+
+
+    <!-- <sly data-sly-call=""/> -->
+
+<script src="../../etc.clientlibs/kia2/clientlibs/in/clientlib-basepage/resources/js/vendor.js"></script>
+<script src="../../etc.clientlibs/kia2/clientlibs/in/clientlib-basepage/resources/js/common.js"></script>  
+
+<script src="../../etc.clientlibs/kia2/clientlibs/in/clientlib-basepage/resources/js/modal.js"></script>
+<script>
+
+
+
+
+
+
+
+
+
+function gtagEventBtn(param) {
+	if(!param.category) param.category = kmi.gaEventCategory + '_Click';
+	if(!param.action) param.action = 'Button_Click';
+	if(!param.label) param.label = $(param.btn).text();
+	gtagEvent(param);
+}
+function gtagEvent(param) {
+    console.log('ga event' , param);
+    gtag('event', param.action || '', {
+        'event_category' : param.category || '',
+        'event_label' : param.label || ''
+    });
+}
+
+
+
+
+function gtagCustom(eventName, param) {
+    console.log('ga custom dimension click before' , JSON.stringify(param) );
+    
+    var customDimension = {
+             'page name' :                    'dimension15' ,       
+             'landing page type':             'dimension1' ,   
+             'landing page type detail':      'dimension2' ,  
+             'vehicle name':                  'dimension3' ,
+             'vehicle type':                  'dimension4' ,
+             'showroom info type':            'dimension5' ,
+             'conversion action':                        'dimension6' ,
+             'conversion funnel':             'dimension7' ,
+             'trim':                          'dimension8' ,
+             'color':                         'dimension9',
+             'option':                        'dimension10',
+             'price':                         'dimension11',
+             'year':                          'dimension12',
+             'location':                      'dimension13',
+             'dealer name':                   'dimension14'
+    };
+    
+    var keys = Object.keys(param);
+    
+    for(var i = 0 ; i < keys.length ; i++) {
+        var key = keys[i];
+        if($.inArray(key.toLowerCase(), Object.keys(customDimension)) > -1) param = changePropName(param, key, customDimension[key]);
+    }
+    
+    console.log('ga custom dimension click after' , param );
+    gtag('event', param.eventName || '', param);
+}
+
+
+function changePropName(obj, oldName, newName) {
+    // Do nothing if the names are the same
+    if (oldName == newName) {
+        return this;
+    }
+   // Check for the old property name to avoid a ReferenceError in strict mode.
+   if (obj.hasOwnProperty(oldName)) {
+       obj[newName] = obj[oldName];
+       delete obj[oldName];
+   }
+   return obj;
+};
+</script>
+
+
+    
+    
+<link rel="stylesheet" href="../../etc.clientlibs/kia2/clientlibs/in/clientlib-showroom.min.css" type="text/css">
+
+
+
+
+
+
+<script>
+$( document ).ready(function() {
+	window.vehicleName = 'SONET';        //for analytics
+});
+</script>
+
+<body>
+	
+
+    <div class="vehicle-trim-compare parbase"><div class="bg--light pt-xxl pb-xxl " style="background-image: url('');background-repeat: no-repeat;background-position: center;position: relative;background-size: cover;">
+
+    
+    
+        <link rel="stylesheet" href="../../etc.clientlibs/kia2/components/in/content/our-vehicles/vehicle-trim-compare/clientlib.min.css" type="text/css">
+        
+        
+        
+        
+        
+        <!-- COMPONENT START -->
+        <!-- [SPA] vehicle trim compare -->
+        
+        <div class="block trims">
+            <div class="l-wrap">
+                <div class="swiper-container l-slider trims-slider">
+                    <div class="swiper-wrapper">
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">HTE</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(989000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-ud.png" class="swatch-img"/>  
+                                                        <span class="swatch-name">Clear White</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">Driver and Passenger Airbags &amp; ABS</li>
+                                            <li class="feature-item">Projector Headlamps</li>
+                                            <li class="feature-item">Air Conditioner with Rear AC Vents</li>
+                                            <li class="feature-item">Shark Fin Antenna</li>
+                                            <li class="feature-item">9.65cm (3.8&quot;) Audio with Steering Mounted Audio Controls</li>
+                                            <li class="feature-item">Rear parking sensors</li>
+                                            <li class="feature-item">Keyless Entry</li>
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTE', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTE', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-0" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">HTK</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(1169000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a6r.png" alt="Intense Red" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intense Red</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-kdg.png" alt="Gravity Gray" class="swatch-img"/>  
+                                                        <span class="swatch-name">Gravity Gray</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-bnb.png" alt="Intelligency Blue" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intelligency Blue</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a7a.png" alt="Punchy Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Punchy Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-ud.png" class="swatch-img"/>  
+                                                        <span class="swatch-name">Clear White</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">20.32cm (8.0&quot;) Touchscreen infotainment</li>
+                                            <li class="feature-item">Android Auto/ Apple Carplay</li>
+                                            <li class="feature-item">Projector fog lamps</li>
+                                            <li class="feature-item">Rear view camera</li>
+                                            <li class="feature-item">Electric adjust ORVM with turn indicator</li>
+                                            <li class="feature-item">Floating Roof rails</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTK', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTK', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-1" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">HTK+</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(1369000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a6r.png" alt="Intense Red" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intense Red</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gwp.png" alt="Glacier White Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Glacier White Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-kdg.png" alt="Gravity Gray" class="swatch-img"/>  
+                                                        <span class="swatch-name">Gravity Gray</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-bnb.png" alt="Intelligency Blue" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intelligency Blue</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a7a.png" alt="Punchy Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Punchy Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">R16 - 40.62cm (16&quot;) Hyper metallic alloys</li>
+                                            <li class="feature-item">Heartbeat LED DRLs</li>
+                                            <li class="feature-item">Smart key with push button start</li>
+                                            <li class="feature-item">LED sound mood lights</li>
+                                            <li class="feature-item">Cruise control</li>
+                                            <li class="feature-item">Rear Sun-shade curtain</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTK+', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTK+', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-2" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">HTX</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(1444000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a6r.png" alt="Intense Red" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intense Red</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gwp.png" alt="Glacier White Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Glacier White Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-kdg.png" alt="Gravity Gray" class="swatch-img"/>  
+                                                        <span class="swatch-name">Gravity Gray</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-abp.png" alt="Aurora Black Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Aurora Black Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-bnb.png" alt="Intelligency Blue" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intelligency Blue</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a7a.png" alt="Punchy Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Punchy Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">Electric Sunroof</li>
+                                            <li class="feature-item">Crown jewel LED headlamps with sweeping LED light bar</li>
+                                            <li class="feature-item">Heartbeat LED tail lamps</li>
+                                            <li class="feature-item">R17 - 43.18cm (17&quot;) Hyper metallic alloys</li>
+                                            <li class="feature-item">Leatherette with Honeycomb pattern - Beige &amp; black</li>
+                                            <li class="feature-item">26.03cm (10.25&quot;) HD Touchscreen navigation with UVO connected car</li>
+                                            <li class="feature-item">Smart Pure Air purifier</li>
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTX', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTX', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-3" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">HTX+</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(1549000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a6r.png" alt="Intense Red" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intense Red</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gwp.png" alt="Glacier White Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Glacier White Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-kdg.png" alt="Gravity Gray" class="swatch-img"/>  
+                                                        <span class="swatch-name">Gravity Gray</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-abp.png" alt="Aurora Black Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Aurora Black Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-bnb.png" alt="Intelligency Blue" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intelligency Blue</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a7a.png" alt="Punchy Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Punchy Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gb2.png" alt="White Pearl + Black" class="swatch-img"/>  
+                                                        <span class="swatch-name">White Pearl + Black</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/ti-gb5.png" alt="Orange + White" class="swatch-img"/>  
+                                                        <span class="swatch-name">Orange + White</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gb7.png" alt="White Pearl + Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">White Pearl + Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gb3.png" alt="Red + Black" class="swatch-img"/>  
+                                                        <span class="swatch-name">Red + Black</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/ti-gb8.png" alt="Silver + Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Silver + Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">Bose premium 8 speaker system</li>
+                                            <li class="feature-item">Ventilated front seats</li>
+                                            <li class="feature-item">8-way Driver power seat</li>
+                                            <li class="feature-item">Advance 17.78cm (7.0&quot;) colour display cluster</li>
+                                            <li class="feature-item">Front Parking Sensor</li>
+                                            <li class="feature-item">Wireless charger - smartphone</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTX+', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'HTX+', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-4" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">GTX</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(1554000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a6r.png" alt="Intense Red" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intense Red</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gwp.png" alt="Glacier White Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Glacier White Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-kdg.png" alt="Gravity Gray" class="swatch-img"/>  
+                                                        <span class="swatch-name">Gravity Gray</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-abp.png" alt="Aurora Black Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Aurora Black Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-bnb.png" alt="Intelligency Blue" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intelligency Blue</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a7a.png" alt="Punchy Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Punchy Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">Smart 20.32 cm (8.0&quot;) Head-Up Display</li>
+                                            <li class="feature-item">Six Airbags</li>
+                                            <li class="feature-item">Advance 17.78cm (7.0&quot;) Colour display panel</li>
+                                            <li class="feature-item">Electric Sunroof</li>
+                                            <li class="feature-item">26.03cm (10.25&quot;) HD Touchscreen navigation with UVO connected car</li>
+                                            <li class="feature-item">ESC, HAC, VSM, BA</li>
+                                            <li class="feature-item">Smart Pure Air purifier</li>
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'GTX', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'GTX', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-5" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <section class="trim-card">
+                                    <header class="trim-header">
+                                        <h3 class="h4">GTX+</h3>
+                                        <p class="info">
+                                             <span class="price"><script type="text/javascript">ComUtils.currency(1639000);</script></span> 
+                                            <span class="desc">Starting MSRP*</span>
+                                        </p>
+                                    </header>
+                                    <div class="trim-body">
+                                        <ul class="swatches small">
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a6r.png" alt="Intense Red" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intense Red</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gwp.png" alt="Glacier White Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Glacier White Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-klg.png" alt="Steel Silver" class="swatch-img"/>  
+                                                        <span class="swatch-name">Steel Silver</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-kdg.png" alt="Gravity Gray" class="swatch-img"/>  
+                                                        <span class="swatch-name">Gravity Gray</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-abp.png" alt="Aurora Black Pearl" class="swatch-img"/>  
+                                                        <span class="swatch-name">Aurora Black Pearl</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-bnb.png" alt="Intelligency Blue" class="swatch-img"/>  
+                                                        <span class="swatch-name">Intelligency Blue</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-a7a.png" alt="Punchy Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Punchy Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gb2.png" alt="White Pearl + Black" class="swatch-img"/>  
+                                                        <span class="swatch-name">White Pearl + Black</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gb7.png" alt="White Pearl + Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">White Pearl + Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/sp2i-gb3.png" alt="Red + Black" class="swatch-img"/>  
+                                                        <span class="swatch-name">Red + Black</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/ti-gb5.png" alt="Orange + White" class="swatch-img"/>  
+                                                        <span class="swatch-name">Orange + White</span>
+                                                    </button>
+                                                </li>
+                                            
+                                                <li class="swatch border">
+                                                    <button type="button" class="swatch-btn">
+                                                        <img src="../../content/dam/kia2/in/en/data/vehicle-info/exterior-color/mdbt0010/ti-gb8.png" alt="Silver + Orange" class="swatch-img"/>  
+                                                        <span class="swatch-name">Silver + Orange</span>
+                                                    </button>
+                                                </li>
+                                            
+                                        </ul>
+                                        <p class="features">Features</p>
+                                        <ul class="feature-list">
+                                            <li class="feature-item">Bose premium 8 speaker system</li>
+                                            <li class="feature-item">360 degree camera with front parking sensors</li>
+                                            <li class="feature-item">Ventilation front seats</li>
+                                            <li class="feature-item">8-way Driver power seat</li>
+                                            <li class="feature-item">Multi Drive modes &amp; Traction modes (AT/DCT only)</li>
+                                            <li class="feature-item">Blind view monitor</li>
+                                            <li class="feature-item">Wireless charger - smartphone</li>
+                                        </ul>
+                                    </div>
+                                    <div class="trim-func">
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'GTX+', label:'Configure'});" href="https://www.kia.com/in/buy/configure/select-a-location.html" class="link link--push"><span class="text">Configure</span></a>
+                                        <a onclick="gtagEvent({category:kmi.gaEventCategory, action:'GTX+', label:'Specs'});" href="https://www.kia.com/in/our-vehicles/seltos/specs.html#trim-6" class="link link--push"><span class="text">Specs</span></a>
+                                    </div>
+                                </section>
+                            </div>
+                        
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <!-- // [SPA] vehicle trim compare -->
+        <!-- // COMPONENT END -->
+        
+        
+            
+            
+        <script type="text/javascript" src="../../etc.clientlibs/kia2/components/in/content/our-vehicles/vehicle-trim-compare/clientlib.min.js"></script>
+        
+        
+        
+        
+        </div>
+        </div>
+        
+        
+        
+</body>
+
+	
+	<script src="../../etc.clientlibs/kia2/clientlibs/in/clientlib-basepage/resources/js/action.js"></script>
